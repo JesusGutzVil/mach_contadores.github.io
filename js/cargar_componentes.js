@@ -8,7 +8,12 @@ function loadComponent(targetId, file) {
   if (!container) return;
 
   fetch(file)
-    .then((r) => r.text())
+    .then((r) => {
+      if (!r.ok) throw new Error("No se pudo cargar " + file); // valida respuesta
+      return r.text();
+    })
     .then((html) => (container.innerHTML = html))
-    .catch((err) => console.error("Error cargando ", file, err));
+    .catch((err) => console.error(err)); // muestra error real
 }
+
+
