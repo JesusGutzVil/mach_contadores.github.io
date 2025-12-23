@@ -1,0 +1,333 @@
+/* ------- HERO PRINCIPAL ------- */
+body{
+    background-color: #1f2937;
+    text-align: justify;
+}
+
+.hero {
+    background: #1f2937;
+    color: #fff;
+    padding-top: 140px;
+    padding-bottom: 100px;
+}
+
+.hero h1 {
+    font-size: 3.8rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.hero h1 span {
+    color: #3974d3;
+    font-family: arial, serif;
+    font-style: italic;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin: 16px auto 0 auto; /* Centración REAL */
+    max-width: 650px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Imagen del hero */
+.hero-img {
+    width: 90%;
+    max-width: 400px;
+}
+
+/* Layout del hero */
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+/* Móvil */
+@media (max-width: 900px) {
+    .hero-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .hero-img {
+        margin: auto;
+    }
+}
+
+/* ======= SECCIÓN DESTACADOS ======= */
+.services-highlight {
+  background: #1f2937;
+  padding: 80px 0;
+  color: white;
+}
+
+.highlight-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  max-width: 900px;
+  margin: auto;
+}
+
+@media (min-width: 800px) {
+  .highlight-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.highlight-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 25px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.1);
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.highlight-card:hover {
+  transform: translateY(-4px);
+  background: rgba(255, 255, 255, 0.10);
+}
+
+.highlight-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.highlight-card p {
+  font-size: 1rem;
+  color: #cbd5e1;
+}
+
+.highlight-icon {
+  width: 55px;
+  height: 55px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  color: white;
+}
+
+.highlight-icon.blue {
+  background: #3b82f6;
+}
+
+.highlight-icon.green {
+  background: #22c55e;
+}
+
+/* ====== +25 AÑOS DE EXCELENCIA ====== */
+.experience-block {
+  background: #f8fafc;
+  padding: 70px 0;
+}
+
+.exp-title {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: #1f2937;
+  margin-bottom: 20px;
+}
+
+.exp-title span {
+  color: #3974d3;
+  font-style: italic;
+}
+
+.exp-text {
+  color: #475569;
+  font-size: 1.15rem;
+  line-height: 1.7;
+  max-width: 900px;
+  margin-bottom: 22px;
+}
+
+.exp-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+  margin-top: 40px;
+  max-width: 700px;
+}
+
+.exp-card {
+  background: white;
+  padding: 35px;
+  border-radius: 18px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+  border: 1px solid #e2e8f0;
+}
+
+.exp-card h3 {
+  font-size: 2.4rem;
+  color: #3974d3;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+.exp-card p {
+  font-size: 1rem;
+  color: #475569;
+}
+
+.exp-card i {
+  font-size: 2.3rem;
+  color: #3974d3;
+}
+
+@media (max-width: 900px) {
+  .exp-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* Eliminar espacio en blanco debajo del header */
+.carousel-section {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
+
+body {
+    padding-top: 0 !important;
+}
+
+
+/* nah */
+
+/* MISIÓN Y VISIÓN — TARJETAS DOBLES */
+
+.mach-mv-section {
+  padding: 10px 0 10px;
+  background: azure;
+}
+
+.mach-mv-grid {
+  max-width: 1250px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 55px;
+  padding: 20px 20px;
+}
+
+.mach-mv-card {
+  background: #1f2937;
+  color: white;
+  padding: 55px 40px;
+  border-radius: 34px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.mach-mv-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+}
+
+.mach-mv-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #60a5fa;
+}
+
+.mach-mv-text {
+  font-size: 1rem;
+  line-height: 1.6;
+  opacity: 0.92;
+}
+
+@media (max-width: 900px) {
+  .mach-mv-grid {
+    grid-template-columns: 1fr;
+    max-width: 700px;
+  }
+}
+
+
+/* ====== +25 AÑOS DE EXCELENCIA ====== */
+.experience-block {
+  background: azure;
+  padding: 80px 0 90px;
+  text-align: center;
+}
+
+/* TÍTULO */
+.exp-title {
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: #1f2937;
+  margin-bottom: 20px;
+}
+
+.exp-title span {
+  color: #3974d3;
+  font-style: italic;
+}
+
+/* PÁRRAFOS */
+.exp-text {
+  max-width: 850px;
+  margin: 0 auto 18px auto;
+  font-size: 1rem;
+  color: #4b5563;
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* CONTENEDOR DE TARJETAS */
+.exp-cards {
+  margin-top: 45px;
+  display: flex;
+  justify-content: center;
+  gap: 35px;
+  flex-wrap: wrap;
+}
+
+/* TARJETAS */
+.exp-card {
+  background: #1f2937;
+  color: white;
+  padding: 40px 35px;
+  width: 240px;
+  border-radius: 28px;
+  text-align: center;
+  box-shadow: 0 12px 35px rgba(0,0,0,0.25);
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.exp-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.35);
+}
+
+/* NÚMEROS */
+.exp-card h3 {
+  font-size: 2.7rem;
+  font-weight: 800;
+  color: #60a5fa;
+  margin-bottom: 8px;
+}
+
+/* TEXTOS DE LAS TARJETAS */
+.exp-card p {
+  font-size: 0.95rem;
+  opacity: 0.9;
+  margin-top: 4px;
+}
+
+/* ICONO */
+.exp-card i {
+  font-size: 2.4rem;
+  color: #60a5fa;
+}
