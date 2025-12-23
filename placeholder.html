@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Próximamente — MACH Contadores</title>
+    <link rel="icon" type="image/png" href="images/icono-logo.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <style>
+      /* ===== Estilos aislados ===== */
+      :root {
+        --bg: #0f172a;
+        --panel: #1f2937;
+        --text: #e5e7eb;
+        --muted: #94a3b8;
+        --accent1: #60a5fa;
+        --accent2: #3b82f6;
+        --accent3: #6366f1;
+      }
+
+      html,
+      body {
+        height: 100%;
+      }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--text);
+        display: grid;
+        place-items: center;
+        font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial,
+          "Noto Sans";
+      }
+
+      .ph-wrap {
+        width: min(840px, 92vw);
+        padding: 28px 22px;
+        animation: fadeIn 0.8s ease both;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .ph-card {
+        position: relative;
+        border-radius: 24px;
+        padding: 40px 28px;
+        background: var(--panel);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        box-shadow: 0 12px 28px rgba(0, 0, 0, 0.18);
+        overflow: hidden;
+        text-align: center;
+      }
+
+      .ph-card::before {
+        content: "";
+        position: absolute;
+        inset: -1px;
+        border-radius: 24px;
+        padding: 1px;
+        background: linear-gradient(
+          90deg,
+          var(--accent1),
+          var(--accent2),
+          var(--accent3)
+        );
+        -webkit-mask: linear-gradient(#000 0 0) content-box,
+          linear-gradient(#000 0 0);
+        -webkit-mask-composite: xor;
+        mask-composite: exclude;
+        pointer-events: none;
+      }
+
+      .ph-icon {
+        width: 80px;
+        height: 80px;
+        border-radius: 20px;
+        display: grid;
+        place-items: center;
+        background: var(--accent1);
+        color: #0b1220;
+        font-size: 36px;
+        box-shadow: 0 0 18px rgba(96, 165, 250, 0.55);
+        margin: 0 auto 16px;
+      }
+
+      h1 {
+        margin: 6px 0 12px;
+        font-size: clamp(1.8rem, 3vw, 2.4rem);
+        font-weight: 800;
+      }
+
+      .desc {
+        opacity: 0.95;
+        font-size: 1.08rem;
+        line-height: 1.6;
+        margin: 0 0 22px;
+        max-width: 600px;
+        margin-inline: auto;
+      }
+
+      .ph-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        padding: 12px 18px;
+        border-radius: 12px;
+        font-weight: 700;
+        letter-spacing: 0.2px;
+        background: var(--accent1);
+        color: #0b1220;
+        border: 1px solid var(--accent1);
+        text-decoration: none;
+        min-width: 180px;
+        transition: all 0.2s ease;
+      }
+
+      .ph-btn:hover {
+        filter: brightness(1.08);
+        transform: translateY(-2px);
+      }
+
+      .ph-mini {
+        margin-top: 20px;
+        color: #94a3b8;
+        font-size: 0.92rem;
+        text-align: center;
+      }
+
+      @media (max-width: 640px) {
+        .ph-card {
+          padding: 30px 20px;
+        }
+        .ph-icon {
+          width: 64px;
+          height: 64px;
+          font-size: 30px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <main class="ph-wrap">
+      <section class="ph-card" role="status" aria-live="polite">
+        <div class="ph-icon">
+          <i class="fa-solid fa-screwdriver-wrench"></i>
+        </div>
+        <h1>Estamos trabajando en nuevas funciones</h1>
+        <p class="desc">
+          Nuestro equipo está desarrollando herramientas innovadoras para
+          mejorar tu experiencia y ofrecerte servicios más eficientes. Estas
+          secciones estarán disponibles muy pronto.
+        </p>
+
+        <a class="ph-btn" href="index.html">
+          <i class="fa-solid fa-house"></i> Volver al inicio
+        </a>
+      </section>
+
+      <p class="ph-mini">
+        © 2025 MACH Contadores — Todos los derechos reservados.
+      </p>
+    </main>
+  </body>
+</html>
