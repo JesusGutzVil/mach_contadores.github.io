@@ -1,0 +1,25 @@
+/* ------- FORMULARIO DE CONTACTO ------- */
+.contacto-form {
+    max-width: 600px;
+    margin: auto;
+}
+
+.contacto-form input,
+.contacto-form textarea {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 18px;
+    border-radius: 8px;
+    border: 1px solid #d1d5db;
+    font-size: 1rem;
+    outline: none;
+}
+
+.contacto-form input:focus,
+.contacto-form textarea:focus {
+    border-color: #3b82f6;
+}
+
+.contacto-form textarea {
+    resize: vertical;
+}
