@@ -1,81 +1,40 @@
-<header class="mach-header site-header">
-  <div class="container">
-    <div class="logo">
-      <img src="images/logo-mach.png" alt="MACH Contadores Públicos" />
-    </div>
+<header class="header fixed-top">
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
 
-    <!-- Botón hamburguesa (visible solo en pantallas pequeñas) -->
-    <button
-      id="menu-btn"
-      class="menu-btn"
-      aria-label="Abrir menú"
-      aria-controls="mobile-menu"
-      aria-expanded="false"
-      type="button"
-    >
-      <span class="menu-icon" aria-hidden="true">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-      </span>
-    </button>
+      <!-- LOGO -->
+      <a class="navbar-brand" href="index.html">
+        <img src="./images/logo-mach-nuevo.png" alt="MACH Contadores">
+      </a>
 
-    <nav class="mach-nav header-nav" aria-label="Navegación principal">
-      <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="nosotros.html">Nosotros</a></li>
-        <li><a href="servicios.html">Servicios</a></li>
-        <li>
-          <a
-            href="placeholder.html?title=Portal%20MACH&icon=fa-lock&msg=Estamos%20preparando%20el%20acceso%20a%20nuestro%20portal%20empresarial.&hint=Pronto%20podrás%20iniciar%20sesión%20para%20consultar%20servicios.&cta1Txt=Volver%20al%20inicio&cta1Url=/index.html"
-          >
-            Portal MACH
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://wa.me/5255341717"
-            target="_blank"
-            class="whatsapp-link"
-          >
-            <i class="fab fa-whatsapp"></i> WhatsApp
-          </a>
-        </li>
-      </ul>
-    </nav>
-  </div>
+      <!-- TOGGLE -->
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#menu"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-  <!-- Menú móvil (oculto por defecto, se abre con .open) -->
-  <div id="mobile-menu" class="mobile-menu" aria-hidden="true">
-    <div class="mobile-menu-inner">
-      <nav aria-label="Menú móvil">
-        <ul>
-          <li><a href="index.html">Inicio</a></li>
-          <li><a href="nosotros.html">Nosotros</a></li>
-          <li><a href="servicios.html">Servicios</a></li>
-          <li>
-            <a
-              href="placeholder.html?title=Portal%20MACH&icon=fa-lock&msg=Estamos%20preparando%20el%20acceso%20a%20nuestro%20portal%20empresarial.&hint=Pronto%20podrás%20iniciar%20sesión%20para%20consultar%20servicios.&cta1Txt=Volver%20al%20inicio&cta1Url=/index.html"
-            >
-              Portal MACH
-            </a>
+      <!-- MENU -->
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav ms-auto nav-links">
+          <li class="nav-item">
+            <a class="nav-link active" href="index.html">Inicio</a>
           </li>
-          <li>
-            <a href="https://wa.me/5255341717" target="_blank" rel="noopener"
-              >WhatsApp</a
-            >
+          <li class="nav-item">
+            <a class="nav-link" href="nosotros.html">Nosotros</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="servicios.html">Servicios</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="placeholder.html">Regístrate</a>
           </li>
         </ul>
-      </nav>
-
-      <div class="mobile-actions">
-        <a class="footer-btn dark sm same" href="placeholder.html"
-          >Suscribirme</a
-        >
-        <a class="footer-btn dark sm same" href="placeholder.html"
-          >Agendar consulta</a
-        >
       </div>
+
     </div>
-  </div>
+  </nav>
 </header>

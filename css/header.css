@@ -1,235 +1,139 @@
-/* ========== Header básico ========== */
-.mach-header {
-  background: #fff;
-  border-bottom: 1px solid #f1f5f9;
-  position: sticky;
-  top: 0;
-  z-index: 100;
+:root {
+  --color-primario: rgb(49, 87, 98);
+  --color-claro: rgb(239, 239, 239);
+  --color-texto: rgb(33, 33, 33);
+  --font-principal: "DM Sans", sans-serif;
+  --ease: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.mach-header .container {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
+/* BASE + ENTRADA */
+body {
+  font-family: var(--font-principal);
+  background-color: var(--color-claro);
+  color: var(--color-texto);
+  opacity: 0;
+  animation: pageIn 0.6s var(--ease) forwards;
+  padding-top: 110px;
+}
+
+@keyframes pageIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* HEADER */
+.header {
+  background: transparent;
+  opacity: 0;
+  animation: headerIn 0.6s var(--ease) forwards;
+  animation-delay: 0.1s;
+}
+
+@keyframes headerIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* HEADER SCROLL */
+.header.scrolled {
+  background-color: transparent;
+}
+
+/* NAVBAR COMPACTO */
+.navbar {
+  padding: 10px 0px;
+}
+
+/* LOGO — NO TOCADO */
+.navbar-brand img {
+  height: 52px;
+  width: auto;
+  filter: brightness(0) saturate(100%) invert(33%) sepia(18%) saturate(650%)
+    hue-rotate(155deg) brightness(95%) contrast(95%)
+    drop-shadow(0 6px 16px rgba(49, 87, 98, 0.45));
+  transition: transform 0.4s var(--ease);
+}
+
+.navbar-brand img:hover {
+  transform: scale(1.06) rotate(-1deg);
+}
+
+/* CONTENEDOR REDONDEADO */
+.nav-links {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* ← mismo tamaño real */
   align-items: center;
-  justify-content: space-between;
-  padding: 10px 20px;
+  padding: 8px 32px;
+  border-radius: 80px;
+  background-color: rgba(239, 239, 239, 0.95);
+  box-shadow: 0 14px 32px rgba(0,0,0,.12);
+  gap: 12px;
 }
 
-/* ========== Logo (más grande) ========== */
-.mach-header .logo img {
-  height: 78px; /* más presencia */
-  transition: transform 0.25s ease;
-}
-.mach-header .logo img:hover {
-  transform: scale(1.03);
-}
 
-/* ========== Navegación ========== */
-.mach-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  align-items: center;
-  gap: 28px;
-}
-.mach-nav a {
-  text-decoration: none;
+/* LINKS */
+.nav-links .nav-link {
   position: relative;
+  text-align: center;
+  padding: 8px 0;              /* ← misma altura que antes */
+  border-radius: 40px;
   font-weight: 500;
-  color: #0f172a;
-  transition: color 0.25s ease;
-}
-.mach-nav a:hover {
-  color: #2563eb;
+  color: var(--color-primario);
+  z-index: 1;
 }
 
-/* Activo con subrayado */
-.mach-nav a.active {
-  color: #2563eb;
-}
-.mach-nav a.active::after {
+
+/* HOVER LIMPIO */
+.nav-links .nav-link:not(.active):hover::before {
   content: "";
   position: absolute;
-  left: 0;
-  bottom: -4px;
-  width: 100%;
-  height: 2px;
-  background: #2563eb;
-  border-radius: 2px;
+  inset: 4px 0; /* ← IGUAL al activo */
+  background-color: rgba(49, 87, 98, 0.10);
+  border-radius: 40px;
+  z-index: 1;
 }
 
-/* ========== Botón WhatsApp (verde) ========== */
-.mach-nav .whatsapp-link {
-  background: #22c55e;
-  color: #fff !important;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  padding: 8px 16px;
-  border-radius: 20px;
-  font-weight: 600;
-  transition: all 0.25s ease;
-}
-.mach-nav .whatsapp-link:hover {
-  background: #16a34a;
-  transform: translateY(-1px);
-  box-shadow: 0 4px 10px rgba(22, 163, 74, 0.3);
+
+/* ACTIVO */
+.nav-links .nav-link.active::before {
+  content: "";
+  position: absolute;
+  inset: 4px 0;               /* ← CRECE SOLO EN HORIZONTAL */
+  background-color: rgba(49, 87, 98, 0.18);
+  border-radius: 40px;
+  z-index: 1;
+  color: var(--color-claro);
 }
 
-/* ========== Botón Portal MACH (azul) ========== */
-.mach-nav .portal-btn {
-  background: #2563eb;
-  color: #fff !important;
-  border: 1px solid #2563eb;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  padding: 8px 16px;
-  border-radius: 20px;
-  font-weight: 600;
-  transition: all 0.25s ease;
-}
-.mach-nav .portal-btn:hover {
-  background: #1d4ed8;
-  border-color: #1d4ed8;
-  transform: translateY(-1px);
-  box-shadow: 0 4px 10px rgba(37, 99, 235, 0.35);
-}
 
-/* ========== Ajustes responsive suaves ========== */
-@media (max-width: 900px) {
-  .mach-header .logo img {
-    height: 64px;
+
+/* RESPONSIVE */
+@media (max-width: 991px) {
+  .navbar {
+    padding: 8px 0;
   }
-  .mach-nav ul {
-    gap: 20px;
+
+  .navbar-brand img {
+    height: 46px;
   }
-}
-@media (max-width: 640px) {
-  .mach-header .container {
-    flex-wrap: wrap;
+
+  .nav-links {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 14px 20px;
     gap: 10px;
+    border-radius: 36px;
   }
-  .mach-nav ul {
-    flex-wrap: wrap;
-    gap: 12px 16px;
-  }
-  .mach-nav .whatsapp-link,
-  .mach-nav .portal-btn {
-    padding: 8px 14px;
-  }
-}
-
-/* ====== Botón hamburguesa (móvil) ====== */
-.menu-btn {
-  display: none; /* visible solo en pantallas pequeñas */
-  background: transparent;
-  border: none;
-  padding: 8px;
-  cursor: pointer;
-  align-items: center;
-  justify-content: center;
-}
-
-.menu-icon {
-  display: inline-block;
-  width: 28px;
-  height: 20px;
-  position: relative;
-}
-
-.menu-icon .bar {
-  display: block;
-  height: 2px;
-  width: 100%;
-  background: #0f172a;
-  margin: 4px 0;
-  border-radius: 2px;
-  transition: transform 0.22s ease, opacity 0.22s ease;
-}
-
-/* Menú móvil (panel deslizante desde la derecha) */
-.mobile-menu {
-  position: fixed;
-  top: 0;
-  right: 0;
-  height: 100vh;
-  width: 320px;
-  max-width: 86vw;
-  background: #ffffff;
-  box-shadow: -18px 22px 60px rgba(7, 10, 19, 0.18);
-  transform: translateX(110%);
-  transition: transform 0.28s cubic-bezier(.2,.9,.3,1);
-  z-index: 120;
-  display: flex;
-  flex-direction: column;
-  padding: 28px 18px;
-  overflow-y: auto;
-}
-
-/* Estado abierto */
-.mobile-menu.open {
-  transform: translateX(0);
-}
-
-/* Ocultar cuando aria-hidden true (por accesibilidad) */
-.mobile-menu[aria-hidden="true"] {
-  pointer-events: none;
-}
-
-/* Contenido interno */
-.mobile-menu-inner nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.mobile-menu-inner nav li {
-  margin-bottom: 12px;
-}
-
-.mobile-menu-inner nav a {
-  display: block;
-  padding: 12px 8px;
-  text-decoration: none;
-  color: #0f172a;
-  font-weight: 600;
-  border-radius: 8px;
-}
-
-.mobile-menu-inner nav a:hover {
-  background: rgba(59,130,246,0.06);
-  color: #2563eb;
-}
-
-/* Acciones en el menu movil (botones) */
-.mobile-actions {
-  display: flex;
-  gap: 10px;
-  margin-top: 18px;
-  flex-wrap: wrap;
-}
-
-.mobile-actions .footer-btn {
-  flex: 1 1 100%;
-  text-align: center;
-}
-
-/* ====== Responsive rules: ocultar nav de escritorio en pantallas pequeñas y mostrar botón ====== */
-@media (max-width: 900px) {
-  .mach-nav { display: none; }        /* ocultar nav de escritorio */
-  .menu-btn { display: inline-flex; } /* mostrar botón hamburguesa */
-}
-
-/* Mantener desktop normal en pantallas grandes */
-@media (min-width: 901px) {
-  .mobile-menu { display: none; }
-}
-
-/* Pequeños ajustes visuales: cuando el menu está abierto, desactivar scroll del body */
-.mobile-menu.open ~ body,
-body.menu-open {
-  overflow: hidden;
 }

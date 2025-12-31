@@ -3,137 +3,168 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MACH Contadores</title>
-    <link rel="stylesheet" href="css/index.css" />
-    <link rel="stylesheet" href="css/global.css" />
-    <link rel="stylesheet" href="css/header.css" />
-    <link rel="stylesheet" href="css/footer.css" />
-    <link rel="stylesheet" href="css/carousel.css" />
-    <link rel="icon" type="image/png" href="images/icono-logo.png" />
+    <!-- Bootstrap -->
     <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
-    <script src="js/carousel.js" defer></script>
-    <script src="js/global.js" defer></script>
+    <!-- Tipografía -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="icon" type="image/png" href="images/icono-logo.png" />
+    <title>Inicio | MACH Contadores</title>
   </head>
+
   <body>
-    <div id="header"></div>
+    <!-- HEADER (cargado por componente) -->
+    <script src="js/cargar_components.js"></script>
 
-    <section class="carousel-section">
-      <div class="carousel-wrapper">
-        <div class="carousel-track" id="carouselTrack">
-          <div class="carousel-slide">
-            <img src="images/carousel/mach.jpeg" alt="MACH_Contadores" />
+    <!-- CARRUSEL SOLO IMÁGENES -->
+    <main>
+      <section class="image-carousel-wrapper">
+        <div class="image-carousel">
+          <div class="carousel-track">
+            <div class="carousel-slide active">
+              <img src="images/carousel/mach.jpeg" alt="Slide 1" />
+            </div>
+
+            <div class="carousel-slide">
+              <img src="images/carousel/mach.jpg" alt="Slide 2" />
+            </div>
+
+            <div class="carousel-slide">
+              <img src="images/carousel/machcito.jpeg" alt="Slide 3" />
+            </div>
           </div>
 
-          <div class="carousel-slide">
-            <img src="images/carousel/mach.jpg" alt="MACH_Contadores" />
-          </div>
-
-          <div class="carousel-slide">
-            <img src="images/carousel/machcito.jpeg" alt="MACH_Contadores" />
-          </div>
-
-          <div class="carousel-slide">
-            <img src="images/carousel/calculadoraa.jpg" alt="MACH_Contadores" />
-          </div>
-        </div>
-
-        <button class="carousel-btn prev" id="prevBtn">&#10094;</button>
-        <button class="carousel-btn next" id="nextBtn">&#10095;</button>
-
-        <div class="carousel-dots" id="carouselDots"></div>
-      </div>
-    </section>
-
-    <section class="hero section">
-      <div class="container">
-        <h1 class="section-title">Contabilidad Profesional para tu Empresa</h1>
-      </div>
-    </section>
-
-    <section class="services-highlight section">
-      <div class="container highlight-grid">
-        <!-- Tarjeta 1 -->
-        <div class="highlight-card">
-          <div class="highlight-icon blue">
-            <i class="fas fa-check-circle"></i>
-          </div>
-          <div>
-            <h3>Cumplimiento Fiscal</h3>
-            <p>100% Legal y Confiable</p>
+          <!-- DOTS -->
+          <div class="carousel-dots">
+            <button class="dot active"></button>
+            <button class="dot"></button>
+            <button class="dot"></button>
           </div>
         </div>
+      </section>
+      <!-- TERMINA EL CARRUSEL -->
+      <section class="value-section">
+        <div class="value-container">
+          <!-- COLUMNA IZQUIERDA -->
+          <div class="value-copy">
+            <span class="value-tag"> +25 años de experiencia comprobada.</span>
 
-        <!-- Tarjeta 2 -->
-        <div class="highlight-card">
-          <div class="highlight-icon green">
-            <i class="fas fa-users"></i>
+            <h2 class="value-title">
+              Contabilidad
+              <span>Profesional</span>
+              que impulsa decisiones
+            </h2>
+
+            <p class="value-text">
+              Despacho líder en servicios contables y fiscales, comprometido con
+              la excelencia y el crecimiento de su empresa.
+            </p>
+
+            <div class="value-actions">
+              <a href="servicios.html" class="btn-solid">Ver Servicios</a>
+              <a href="contacto.html" class="btn-soft">Contactar Ahora</a>
+            </div>
           </div>
-          <div>
-            <h3>Asesoría Especializada</h3>
-            <p>Expertos Certificados</p>
+
+          <!-- COLUMNA DERECHA -->
+          <div class="value-cards">
+            <div class="value-card">
+              <div class="card-icon">✓</div>
+              <div>
+                <h4>Cumplimiento Fiscal</h4>
+                <p>100% legal y alineado a normativa vigente</p>
+              </div>
+            </div>
+
+            <div class="value-card">
+              <div class="card-icon">↗</div>
+              <div>
+                <h4>Crecimiento Empresarial</h4>
+                <p>Estrategias contables que generan valor</p>
+              </div>
+            </div>
+
+            <div class="value-card">
+              <div class="card-icon">👥</div>
+              <div>
+                <h4>Asesoría Especializada</h4>
+                <p>Atención cercana por expertos certificados</p>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+      <!-- TERMINA EL SECCIÓN DE VALORES -->
 
-    <!-- Mision y Vision -->
-     <h2 class="section-title" style="text-align: center; margin-top: 80px">
-      Misión <span>& Visión</span>
-    </h2>
-    <section class="mach-mv-section">
-      <div class="mach-mv-grid">
-        <!-- Misión -->
-        <div class="mach-mv-card">
-          <h3 class="mach-mv-title">Misión</h3>
-          <p class="mach-mv-text">
-            Acompañar a nuestros clientes en cada etapa de su crecimiento,
-            brindando la tranquilidad necesaria para que se enfoquen en sus
-            negocios. Ofrecemos una atención personalizada y empática, donde
-            cada número representa el esfuerzo y los sueños de las personas a
-            las que servimos.
-          </p>
+      <section class="history-section">
+        <div class="history-container">
+          <!-- COLUMNA IZQUIERDA -->
+          <div class="history-text">
+            <span class="history-tag">Nuestra historia</span>
+
+            <h2 class="history-title">+25 Años de <span> Excelencia</span></h2>
+
+            <p>
+              Con más de 25 años de experiencia en el sector contable y fiscal,
+              MACH Contadores Públicos se ha consolidado como un despacho
+              confiable, ético y comprometido con el cumplimiento legal y el
+              desarrollo financiero de nuestros clientes.
+            </p>
+
+            <p>
+              Nuestra trayectoria nos respalda y nuestra visión nos impulsa a
+              seguir innovando para ofrecer soluciones contables modernas,
+              claras y alineadas a las necesidades actuales del mercado.
+            </p>
+          </div>
+
+          <!-- COLUMNA DERECHA (CARDS) -->
+          <div class="history-cards">
+            <div class="value-cards">
+              <div class="value-card">
+                <div class="card-icon">✓</div>
+                <div>
+                  <h4>Cumplimiento Fiscal</h4>
+                  <p>100% legal y alineado a normativa vigente</p>
+                </div>
+              </div>
+
+              <div class="value-card">
+                <div class="card-icon">↗</div>
+                <div>
+                  <h4>Crecimiento Empresarial</h4>
+                  <p>Estrategias contables que generan valor</p>
+                </div>
+              </div>
+
+              <div class="value-card">
+                <div class="card-icon">👥</div>
+                <div>
+                  <h4>Asesoría Especializada</h4>
+                  <p>Atención cercana por expertos certificados</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+      </section>
+    </main>
 
-        <!-- Visión -->
-        <div class="mach-mv-card">
-          <h3 class="mach-mv-title">Visión</h3>
-          <p class="mach-mv-text">
-            Ser la firma líder en la evolución contable, reconocida por nuestra
-            capacidad de adaptación y por integrar la tecnología con el juicio
-            experto, asegurando la vigencia y competitividad de nuestros
-            clientes ante los desafíos del mañana.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Termina mision/vision e inicia historia -->
-    <section class="experience-block section">
-      <div class="container">
-        <h2 class="exp-title">+25 Años de <span>Excelencia</span></h2>
-
-        <p class="exp-text" style="text-align: justify">
-          Con más de +25 años de experiencia en el sector contable y fiscal,
-          MACH Contadores Públicos se ha consolidado como un despacho confiable,
-          ético y comprometido con el cumplimiento legal y el desarrollo
-          financiero de nuestros clientes. Somos Expertos contables, éticos y
-          comprometidos. “Trayectoria que nos respalda, visión que nos impulsa.”
-        </p>
-
-        <p class="exp-text">
-          Nuestra trayectoria nos respalda y nuestra visión nos impulsa a seguir
-          innovando para ofrecer las mejores soluciones contables y fiscales del
-          mercado.
-        </p>
-      </div>
-    </section>
-
-    <div id="footer"></div>
-
-    <script src="js/cargar_componentes.js"></script>
-    <script src="js/menu_mobile.js"></script>
+    <!-- JS -->
+    <script src="js/index_carousel.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
