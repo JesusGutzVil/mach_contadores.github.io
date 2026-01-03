@@ -92,6 +92,10 @@ body {
   font-weight: 500;
   color: var(--color-primario);
   z-index: 1;
+
+  transition:
+    color 0.35s var(--ease),
+    transform 0.35s var(--ease);
 }
 
 
@@ -100,11 +104,11 @@ body {
   content: "";
   position: absolute;
   inset: 4px 0; /* ← IGUAL al activo */
-  background-color: rgba(49, 87, 98, 0.10);
+  background-color: rgba(49, 84, 93, 0.173);
   border-radius: 40px;
   z-index: 1;
+  animation: pillIn 0.6s var(--ease) forwards;
 }
-
 
 /* ACTIVO */
 .nav-links .nav-link.active::before {
@@ -117,7 +121,16 @@ body {
   color: var(--color-claro);
 }
 
-
+@keyframes pillIn {
+  from {
+    opacity: 0;
+    transform: scaleX(0.85);
+  }
+  to {
+    opacity: 1;
+    transform: scaleX(1);
+  }
+}
 
 /* RESPONSIVE */
 @media (max-width: 991px) {

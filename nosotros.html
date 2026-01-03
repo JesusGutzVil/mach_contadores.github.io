@@ -1,27 +1,78 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nosotros | MACH Contadores</title>
+
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
+    <!-- Tipografía -->
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
     <link
       href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/header.css" />
-    <link rel="icon" type="image/png" href="images/icono-logo.png">
-    <title>Nosotros | MACH Contadores</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
 
+    <!-- Estilos -->
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/nosotros.css" />
+
+    <link rel="icon" type="image/png" href="images/icono-logo.png" />
   </head>
-  <body style="background-color: #000000">
+  <body>
     <script src="js/cargar_components.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <h1 class="team-main-title">Nuestro <span id="equipo">Equipo</span></h1>
+    <section class="team-section-unified">
+      <div class="team-container">
+        <div class="team-content">
+          <div class="team-text-area">
+            <div class="info-wrapper" id="info-wrapper">
+              <h4 class="team-role" id="member-role">CARGO</h4>
+              <h2 class="team-name" id="member-name">Nombre</h2>
+
+              <div class="team-bio-scroll">
+                <p class="team-bio" id="member-bio">Bio...</p>
+              </div>
+
+              <div class="team-contact-area mt-2">
+                <a href="#" id="member-email" class="btn-contact-small">
+                  <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                    />
+                  </svg>
+                  <span>Enviar Correo</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="team-image-area">
+            <div class="image-mask">
+              <img src="" alt="Foto Perfil" id="member-photo" />
+            </div>
+          </div>
+        </div>
+
+        <div class="team-nav-bar">
+          <div class="nav-track" id="thumbnails-container"></div>
+        </div>
+      </div>
+    </section>
+    <script src="js/nosotros.js"></script>
   </body>
 </html>
