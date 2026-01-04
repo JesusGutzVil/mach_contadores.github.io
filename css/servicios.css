@@ -7,6 +7,10 @@
   --font-secundaria: "Montserrat", sans-serif;
 }
 
+body{
+  user-select: none;
+}
+
 /* Evita que se pegue al header de JS */
 .main-wrapper {
   padding-top: 0px; /* Ajusta según el alto de tu header de JS */

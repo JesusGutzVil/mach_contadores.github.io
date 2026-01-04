@@ -16,6 +16,10 @@
   --footer-primary-soft: rgba(49, 87, 98, 0.25);
 }
 
+body{
+  user-select: none;
+}
+
 /* ===============================
    FOOTER BASE
 ================================ */

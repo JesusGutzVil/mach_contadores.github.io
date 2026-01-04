@@ -2,6 +2,9 @@
   --color-primario: rgb(49, 87, 98);
   --card-max-width: 520px;
 }
+body{
+  user-select: none;
+}
 
 /* WRAPPER CENTRADO */
 .image-carousel-wrapper {

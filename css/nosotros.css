@@ -6,8 +6,11 @@
   --font-secundaria: "Montserrat", sans-serif;
 }
 
-/* --- Estilos Team Section --- */
+body{
+  user-select: none;
+}
 
+/* --- Estilos Team Section --- */
 .team-section-unified {
   width: 100%;
   height: 85vh;
