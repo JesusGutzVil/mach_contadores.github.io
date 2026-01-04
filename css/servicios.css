@@ -34,12 +34,12 @@
 .brand-title {
   font-size: clamp(2.5rem, 5vw, 4rem); /* Tamaño fluido */
   font-family: var(--font-principal);
-  color: #2d3748;
+  color: #21385f;
   margin: 20px 0;
 }
 
 .brand-title span {
-  color: var(--color-acento);
+  color: var(--color-primario);
   font-family: var(--font-secundaria);
   font-style: italic;
   font-weight: 600;
