@@ -1,0 +1,164 @@
+:root {
+  --color-primario: #315762;
+  --color-acento: #4a90e2; /* Azul vibrante para dar vida */
+  --color-claro: #efefef;
+  --white: #ffffff;
+  --font-principal: "DM Sans", sans-serif;
+  --font-secundaria: "Montserrat", sans-serif;
+}
+
+/* Evita que se pegue al header de JS */
+.main-wrapper {
+  padding-top: 0px; /* Ajusta según el alto de tu header de JS */
+  background: linear-gradient(180deg, #efefef 0%, #e0e0e0 100%);
+  min-height: 100vh;
+}
+
+/* --- HERO SECTION --- */
+.hero-minimal {
+  text-align: center;
+  padding: 10px 20px;
+}
+
+.badge-new {
+  background: rgba(49, 87, 98, 0.1);
+  color: var(--color-primario);
+  padding: 6px 20px;
+  border-radius: 100px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  border: 1px solid rgba(49, 87, 98, 0.2);
+}
+
+.brand-title {
+  font-size: clamp(2.5rem, 5vw, 4rem); /* Tamaño fluido */
+  font-family: var(--font-principal);
+  color: #2d3748;
+  margin: 20px 0;
+}
+
+.brand-title span {
+  color: var(--color-acento);
+  font-family: var(--font-secundaria);
+  font-style: italic;
+  font-weight: 600;
+}
+
+.brand-tagline {
+  font-size: 1.2rem;
+  color: #718096;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* --- CARTAS MODERNAS --- */
+.services-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  padding: 40px;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.glass-card {
+  background: var(--white);
+  padding: 40px 30px;
+  border-radius: 24px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border: 1px solid #edf2f7;
+  position: relative;
+  overflow: hidden;
+}
+
+.glass-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 20px 40px rgba(49, 87, 98, 0.15);
+  border-color: var(--color-acento);
+}
+
+.card-icon {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  background: #f0f7ff;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+}
+
+.glass-card h3 {
+  font-family: var(--font-secundaria);
+  color: var(--color-primario);
+  font-size: 1.25rem;
+  line-height: 1.3;
+  margin-bottom: 20px;
+}
+
+.card-list {
+  list-style: none;
+  padding: 0;
+}
+
+.card-list li {
+  padding: 8px 0;
+  color: #4a5568;
+  font-size: 0.95rem;
+  border-bottom: 1px solid #f7fafc;
+}
+
+.card-list li::before {
+  content: "✓";
+  color: var(--color-acento);
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+/* --- SECCIÓN DIGITAL (EMOCIONANTE) --- */
+.digital-preview {
+  margin-top: 80px;
+  padding: 60px 20px;
+  background: var(--color-primario);
+  color: white;
+  text-align: center;
+  position: relative;
+}
+
+.digital-content h2 {
+  font-family: var(--font-secundaria);
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.digital-content p {
+  letter-spacing: 3px;
+  font-weight: 300;
+  opacity: 0.9;
+}
+
+.pulse-icon {
+  width: 12px;
+  height: 12px;
+  background: #4ade80;
+  border-radius: 50%;
+  display: inline-block;
+  margin-bottom: 10px;
+  box-shadow: 0 0 0 rgba(74, 222, 128, 0.4);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 15px rgba(74, 222, 128, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(74, 222, 128, 0);
+  }
+}
