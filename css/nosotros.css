@@ -74,7 +74,7 @@ body{
 
 .team-name {
   font-family: var(--font-principal);
-  font-size: clamp(2rem, 3vw, 3.2rem);
+  font-size: clamp(1.5rem, 1.5vw, 2.7rem);
   font-weight: 700;
   color: var(--color-primario);
   margin-bottom: 15px;
@@ -100,7 +100,7 @@ body{
 
 .team-bio {
   font-family: var(--font-principal);
-  font-size: 1rem;
+  font-size: 0.7rem;
   color: #555;
   line-height: 1.5;
   text-align: justify;
