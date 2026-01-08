@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
       bio: "Mi compromiso es ser el enlace estratégico que protege y potencia tu negocio. Me especializo en diseñar estrategias de planeación fiscal que optimizan tu carga tributaria dentro del marco legal. Actúo como tu firme defensa e interlocutor ante las autoridades y aseguro el cumplimiento normativo en la Leyes fiscales. Mi objetivo es traducir las complejas reformas anuales en soluciones claras para tu empresa, brindándote tranquilidad y una asesoría siempre cercana.",
       email:
         "https://mail.google.com/mail/?view=cm&fs=1&to=dr.albertoandrade@mach.com",
-      photoMain: "images/perfiles/EliasAyub.jpg",
+      photoMain: "images/perfiles/CPALBERTO.jpg",
       photoThumb: "images/perfiles/andrade-perfil.png",
     },
     {
@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
       bio: "Mi prioridad es ser tu primera linea de defensa y tranquilidad operativa. Me especializo en blindar tu relacion con la autoridad, gestionando con inmediatez y eficacia cualquier requerimiento o carta de invitacion del SAT para aclarar inconsistencias antes de que se vuelvan problemas Mi expertis abarca desde la precision tecnica en tu cierre fiscal, hasta el acompañamiento total en auditorias. Me encargo de defenderte ante cualquier revision con certeza de que tu empresa esta protegida y en orden.",
       email:
         "https://mail.google.com/mail/?view=cm&fs=1&to=cp.irenemendez@mach.com",
-      photoMain: "images/perfiles/imagen.jpg",
+      photoMain: "images/perfiles/CPIRENE.jpg",
       photoThumb: "images/perfiles/irene-perfil.png",
     },
     {
@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
       bio: "Mi enfoque es brindar certeza y tranquilidad financiera a tu negocio. Me especializo en el análisis de regímenes fiscales, determinando la opción más rentable entre los existentes y supervisando proactivamente el impacto tributario de tus operaciones. Además, protejo a tu empresa mediante el estricto cumplimiento de la normativa REPSE, y diseño soluciones integrales en materia de seguridad social. Mi compromiso es simplificar lo complejo para que tú puedas dedicarte a hacer crecer tu empresa.",
       email:
         "https://mail.google.com/mail/?view=cm&fs=1&to=lc.luisluna@mach.com",
-      photoMain: "images/perfiles/imagaen.jpg",
+      photoMain: "images/perfiles/CPLUIS.jpg",
       photoThumb: "images/perfiles/luis-perfil.png",
     },
     {
@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
       bio: "Transformo tu contabilidad en un escudo preventivo. Con un blindaje fiscal anticipado: ejecuto revisiones continuas, la contabilidad contra los datos del SAT, detectando y corrigiendo cualquier discrepancia antes de que se convierta en un requerimiento. Garantizo un cumplimiento patronal impecable, gestionando con precisión milimétrica tu nómina, cuotas de seguridad social e impuestos locales. Protejo tu patrimonio gestionando liquidaciones y finiquitos con estricto apego a la ley, blindándote contra cualquier demanda futura.",
       email:
         "https://mail.google.com/mail/?view=cm&fs=1&to=lc.juancbarrera@mach.com",
-      photoMain: "images/perfiles/laporta.jpg",
+      photoMain: "images/perfiles/CPJUAN.jpg",
       photoThumb: "images/perfiles/jc-perfil.png",
     },
     {
@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
       bio: "Mi misión es blindar la seguridad financiera de tu empresa. Me especializo en la defensa de la materialidad, integrando expedientes sólidos como contratos, bitácoras y entregables que demuestran la realidad de tus operaciones, y en la protección exhaustiva ante el Art. 69-B del CFF. Además, optimizo tu flujo de efectivo mediante la gestión eficiente de devoluciones y compensaciones de impuestos y la aplicación estratégica de estímulos fiscales. Trabajo contigo hombro a hombro para que tu contabilidad sea sinónimo de certeza y crecimiento.",
       email:
         "https://mail.google.com/mail/?view=cm&fs=1&to=cp.alejandromendoza@mach.com",
-      photoMain: "images/perfiles/Rodrigo_herrera.jpg",
+      photoMain: "images/perfiles/CPALEJANDRO.jpg",
       photoThumb: "images/perfiles/alex-perfil.png",
     },
   ];
