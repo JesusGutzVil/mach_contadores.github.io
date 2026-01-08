@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
       bio: "Mi compromiso es ser el enlace estratégico que protege y potencia tu negocio. Me especializo en diseñar estrategias de planeación fiscal que optimizan tu carga tributaria dentro del marco legal. Actúo como tu firme defensa e interlocutor ante las autoridades y aseguro el cumplimiento normativo en la Leyes fiscales. Mi objetivo es traducir las complejas reformas anuales en soluciones claras para tu empresa, brindándote tranquilidad y una asesoría siempre cercana.",
       email:
         "https://mail.google.com/mail/?view=cm&fs=1&to=dr.albertoandrade@mach.com",
-      photoMain: "images/perfiles/eliasAyub.jpg",
+      photoMain: "images/perfiles/EliasAyub.jpg",
       photoThumb: "images/perfiles/andrade-perfil.png",
     },
     {
