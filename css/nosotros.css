@@ -1,12 +1,12 @@
 /* --- 1. VARIABLES GLOBALES (Esencial para que funcione el color) --- */
 :root {
-  --color-primario: #315762; /* Tu color azul verdoso */
-  --color-claro: #efefef;
+  --color-prim: #315762; /* Tu color azul verdoso */
+  --color-blanco: #efefef;
   --font-principal: "DM Sans", sans-serif;
   --font-secundaria: "Montserrat", sans-serif;
 }
 
-body{
+body {
   user-select: none;
 }
 
@@ -20,7 +20,7 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--color-claro);
+  background-color: var(--color-blanco);
   padding: 30px 0; /* Aumenté un poco el padding vertical para que respire mejor */
   box-sizing: border-box;
 }
@@ -77,7 +77,7 @@ body{
   font-family: var(--font-principal);
   font-size: clamp(1.5rem, 1.5vw, 2.7rem);
   font-weight: 700;
-  color: var(--color-primario);
+  color: var(--color-prim);
   margin-top: 20px;
   line-height: 1.5;
 }
@@ -99,7 +99,7 @@ body{
   font-family: var(--font-principal);
   font-size: 0.85rem;
   font-weight: 500;
-  color: var(--color-primario);
+  color: var(--color-prim);
   background: transparent;
   border: 1px solid rgba(49, 87, 98, 0.3);
   border-radius: 4px;
@@ -115,9 +115,9 @@ body{
 }
 
 .btn-contact-small:hover {
-  background-color: var(--color-primario);
+  background-color: var(--color-prim);
   color: white;
-  border-color: var(--color-primario);
+  border-color: var(--color-prim);
 }
 
 .btn-contact-small:hover svg {
@@ -170,7 +170,7 @@ body{
   overflow-x: auto;
 }
 
-.nav-item {
+.team-nav-item {
   cursor: pointer;
   position: relative;
   padding: 4px;
@@ -181,7 +181,7 @@ body{
 }
 
 /* Base de la imagen de navegación */
-.nav-item img {
+.team-nav-item img {
   width: 55px;
   height: 55px;
   border-radius: 50%;
@@ -196,14 +196,14 @@ body{
 /* --- Estados de Interacción --- */
 
 /* 1. Estado INACTIVO (Por defecto) */
-.nav-item.inactive img {
+.team-nav-item.inactive img {
   filter: grayscale(100%);
   opacity: 0.5;
   transform: scale(0.9);
 }
 
 /* 2. Estado HOVER sobre Inactivo */
-.nav-item.inactive:hover img {
+.team-nav-item.inactive:hover img {
   filter: grayscale(0%);
   opacity: 0.8;
   transform: scale(1);
@@ -211,11 +211,11 @@ body{
 }
 
 /* 3. Estado ACTIVO (El Protagonista) */
-.nav-item.active img {
+.team-nav-item.active img {
   filter: grayscale(0%);
   opacity: 1;
   transform: scale(1.35); /* Crece un poco más para destacar */
-  border-color: var(--color-primario); /* AQUÍ SE APLICA EL COLOR */
+  border-color: var(--color-prim); /* AQUÍ SE APLICA EL COLOR */
   box-shadow: 0 8px 25px rgba(49, 87, 98, 0.3);
 }
 
@@ -270,7 +270,7 @@ body{
     border-top: 1px solid #ddd;
   }
 
-  .nav-item img {
+  .team-nav-item img {
     width: 50px;
     height: 50px;
   }
@@ -281,7 +281,7 @@ body{
   font-family: var(--font-principal);
   font-weight: 900;
   font-size: clamp(2.5rem, 5vw, 4rem); /* Tamaño responsivo */
-  color: var(--color-primario);
+  color: var(--color-prim);
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 4px;
@@ -297,7 +297,7 @@ body{
   display: block;
   width: 100px;
   height: 4px;
-  background-color: var(--color-primario);
+  background-color: var(--color-prim);
   margin: 15px auto 0;
   border-radius: 2px;
   opacity: 0.6;
@@ -316,91 +316,97 @@ body{
 
 /* --- Sección Grid Misión, Visión, Valores --- */
 .mvv-grid-section {
-    padding: 80px 0;
-    background-color: var(--color-claro);
-    font-family: var(--font-principal);
+  padding: 80px 0;
+  background-color: var(--color-blanco);
+  font-family: var(--font-principal);
 }
 
 .mvv-flex-container {
-    display: flex;
-    gap: 40px; /* Espacio horizontal entre las dos columnas principales */
-    align-items: stretch; 
+  display: flex;
+  gap: 40px; /* Espacio horizontal entre las dos columnas principales */
+  align-items: stretch;
 }
 
 .mvv-column {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 /* COLUMNA IZQUIERDA: Misión y Visión con separación en medio */
 .mvv-column.left-side {
-    justify-content: space-between; /* AQUÍ ESTÁ EL TRUCO: Empuja una arriba y otra abajo */
+  justify-content: space-between; /* AQUÍ ESTÁ EL TRUCO: Empuja una arriba y otra abajo */
 }
 
 /* COLUMNA DERECHA: Valores con espacio constante */
 .mvv-column.right-side {
-    gap: 15px; /* Espacio pequeño y constante entre los 3 valores */
+  gap: 15px; /* Espacio pequeño y constante entre los 3 valores */
 }
 
 /* Estilo de las Tarjetas */
-.mvv-card-horizontal, .value-item-card {
-    background: white;
-    padding: 25px;
-    border-radius: 12px;
-    border: 1px solid rgba(0,0,0,0.05);
-    transition: all 0.3s ease;
+.mvv-card-horizontal,
+.value-item-card {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
 }
 
 /* Ajuste para que Misión y Visión no se estiren, sino que floten */
 .mvv-card-horizontal {
-    flex: 0 1 auto; /* No se estira forzadamente */
+  flex: 0 1 auto; /* No se estira forzadamente */
 }
 
 /* Encabezados con icono y texto alineados */
 .mvv-header-inline {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
 }
 
 .mvv-icon-small {
-    width: 40px;
-    height: 40px;
-    background-color: rgba(49, 87, 98, 0.1);
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--color-primario);
-    font-size: 1.2rem;
-    flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(49, 87, 98, 0.1);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-prim);
+  font-size: 1.2rem;
+  flex-shrink: 0;
 }
 
 .mvv-header-inline h3 {
-    color: var(--color-primario);
-    font-weight: 700;
-    font-size: 1.1rem;
-    margin: 0;
-    text-transform: uppercase;
+  color: var(--color-prim);
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin: 0;
+  text-transform: uppercase;
 }
 
 .mvv-grid-section p {
-    color: #555;
-    font-size: 0.9rem;
-    line-height: 1.5;
-    margin: 0;
+  color: #555;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin: 0;
 }
 
 /* Hover effect */
-.mvv-card-horizontal:hover, .value-item-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.07);
-    border-color: var(--color-primario);
+.mvv-card-horizontal:hover,
+.value-item-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.07);
+  border-color: var(--color-prim);
 }
 
 @media (max-width: 991px) {
-    .mvv-flex-container { flex-direction: column; }
-    .mvv-column.left-side { gap: 20px; }
+  .mvv-flex-container {
+    flex-direction: column;
+  }
+  .mvv-column.left-side {
+    gap: 20px;
+  }
 }

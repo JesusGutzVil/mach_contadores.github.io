@@ -102,7 +102,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // --- CORRECCIÓN AQUÍ ---
     // Antes: document.querySelectorAll(".nav-item")... <- Esto seleccionaba items del menú de arriba por error
     // Ahora: thumbnailsContainer.querySelectorAll(".nav-item")... <- Solo selecciona los círculos
-    thumbnailsContainer.querySelectorAll(".nav-item").forEach((btn, i) => {
+    thumbnailsContainer.querySelectorAll(".team-nav-item").forEach((btn, i) => {
       if (i === index) {
         btn.classList.add("active");
         btn.classList.remove("inactive");
@@ -121,7 +121,7 @@ document.addEventListener("DOMContentLoaded", () => {
     teamData.forEach((member, index) => {
       const div = document.createElement("div");
       // Asignar clase inicial
-      div.className = `nav-item ${index === 0 ? "active" : "inactive"}`;
+      div.className = `team-nav-item ${index === 0 ? "active" : "inactive"}`; // <--- CAMBIAR AQUÍ
       div.onclick = () => manualSelect(index);
       div.title = member.name;
       div.innerHTML = `<img src="${member.photoThumb}" alt="${member.name}">`;

@@ -2,13 +2,13 @@
   --color-primario: rgb(49, 87, 98);
   --color-claro: rgb(239, 239, 239);
   --color-texto: rgb(33, 33, 33);
-  --font-principal: "DM Sans", sans-serif;
+  --font-pral: "DM Sans", sans-serif;
   --ease: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* BASE + ENTRADA */
 body {
-  font-family: var(--font-principal);
+  font-family: var(--font-pral);
   background-color: var(--color-claro);
   color: var(--color-texto);
   opacity: 0;
@@ -34,7 +34,9 @@ body {
   opacity: 0;
   animation: headerIn 0.6s var(--ease) forwards;
   animation-delay: 0.1s;
+  z-index: 1000;
 }
+/* css/header.css */
 
 @keyframes headerIn {
   from {
@@ -79,26 +81,22 @@ body {
   padding: 8px 32px;
   border-radius: 80px;
   background-color: rgba(239, 239, 239, 0.95);
-  box-shadow: 0 14px 32px rgba(0,0,0,.12);
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.12);
   gap: 12px;
 }
-
 
 /* LINKS */
 .nav-links .nav-link {
   position: relative;
   text-align: center;
-  padding: 8px 0;              /* ← misma altura que antes */
+  padding: 8px 0; /* ← misma altura que antes */
   border-radius: 40px;
   font-weight: 500;
   color: var(--color-primario);
   z-index: 1;
 
-  transition:
-    color 0.35s var(--ease),
-    transform 0.35s var(--ease);
+  transition: color 0.35s var(--ease), transform 0.35s var(--ease);
 }
-
 
 /* HOVER LIMPIO */
 .nav-links .nav-link:not(.active):hover::before {
@@ -115,7 +113,7 @@ body {
 .nav-links .nav-link.active::before {
   content: "";
   position: absolute;
-  inset: 4px 0;               /* ← CRECE SOLO EN HORIZONTAL */
+  inset: 4px 0; /* ← CRECE SOLO EN HORIZONTAL */
   background-color: rgba(49, 87, 98, 0.18);
   border-radius: 40px;
   z-index: 1;
@@ -150,4 +148,18 @@ body {
     gap: 10px;
     border-radius: 36px;
   }
+}
+
+/* Clase para el icono en el menú */
+.header-logo-icon {
+  max-height: 24px; /* Tamaño similar a la altura del texto */
+  width: auto;
+  vertical-align: middle; /* Alineación perfecta con el texto */
+  margin-top: -3px; /* Pequeño ajuste visual si se ve muy abajo */
+  transition: transform 0.3s ease;
+}
+
+/* Efecto al pasar el mouse */
+.nav-link:hover .header-logo-icon {
+  transform: scale(1.2); /* Crece un poquito al seleccionarlo */
 }
