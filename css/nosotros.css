@@ -13,21 +13,22 @@ body{
 /* --- Estilos Team Section --- */
 .team-section-unified {
   width: 100%;
-  height: 85vh;
-  min-height: 550px;
-  max-height: 800px;
+  height: 90vh;
+  min-height: 85vh; /* <-- CAMBIAR A ESTO (asegura altura mínima pero permite crecer) */
+  /* min-height: 550px; <-- ELIMINAR (redundante con 85vh) */
+  /* max-height: 800px; <-- ELIMINAR ESTA LÍNEA IMPORTANTE (para que no corte contenido) */
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--color-claro); /* Usando variable */
-  padding: 15px 0;
+  background-color: var(--color-claro);
+  padding: 30px 0; /* Aumenté un poco el padding vertical para que respire mejor */
   box-sizing: border-box;
 }
 
 .team-container {
   width: 95%;
   max-width: 1100px;
-  height: 100%;
+  height: 105%;
   background: white;
   border-radius: 16px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
@@ -46,8 +47,8 @@ body{
 
 /* Lado Izquierdo: Texto */
 .team-text-area {
-  width: 45%;
-  padding: 0 5%;
+  width: 50%; /* <-- CAMBIAR DE 45% A 50% */
+  padding: 0 4%; /* Reduje un poco el padding lateral (era 5%) para ganar espacio */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -64,7 +65,7 @@ body{
 
 .team-role {
   font-family: var(--font-principal);
-  font-size: 0.8rem;
+  font-size: 1rem;
   letter-spacing: 2px;
   color: #999;
   text-transform: uppercase;
@@ -77,30 +78,13 @@ body{
   font-size: clamp(1.5rem, 1.5vw, 2.7rem);
   font-weight: 700;
   color: var(--color-primario);
-  margin-bottom: 15px;
-  line-height: 1.1;
-}
-
-.team-bio-scroll {
-  max-height: 120px;
-  overflow-y: auto;
-  padding-right: 10px;
-  margin-bottom: 20px;
-  scrollbar-width: thin;
-  scrollbar-color: #eee transparent;
-}
-/* Scrollbar Webkit */
-.team-bio-scroll::-webkit-scrollbar {
-  width: 4px;
-}
-.team-bio-scroll::-webkit-scrollbar-thumb {
-  background: #eee;
-  border-radius: 4px;
+  margin-top: 20px;
+  line-height: 1.5;
 }
 
 .team-bio {
   font-family: var(--font-principal);
-  font-size: 0.7rem;
+  font-size: 14px;
   color: #555;
   line-height: 1.5;
   text-align: justify;
@@ -142,8 +126,9 @@ body{
 
 /* Lado Derecho: Imagen Principal */
 .team-image-area {
-  width: 55%;
-  height: 100%;
+  width: 50%; /* <-- CAMBIAR DE 55% A 50% */
+  height: auto; /* Cambiar height: 100% por auto para que se adapte al contenido de texto */
+  min-height: 100%; /* Asegura que cubra al menos toda la altura */
   position: relative;
   background: #f0f2f4;
   overflow: hidden;
@@ -165,7 +150,7 @@ body{
 
 /* --- Barra Inferior (Navegación) --- */
 .team-nav-bar {
-  height: 150px;
+  height: 120px;
   flex-shrink: 0;
   background: #fff;
   border-top: 1px solid rgba(0, 0, 0, 0.05); /* Borde más sutil */
@@ -180,7 +165,7 @@ body{
   align-items: center;
   justify-content: center;
   gap: 40px; /* Ajuste de espacio */
-  padding: 15px 20px;
+  padding: 10px 15px;
   width: 100%;
   overflow-x: auto;
 }
@@ -197,8 +182,8 @@ body{
 
 /* Base de la imagen de navegación */
 .nav-item img {
-  width: 65px;
-  height: 65px;
+  width: 55px;
+  height: 55px;
   border-radius: 50%;
   object-fit: cover;
   display: block;
