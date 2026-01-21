@@ -278,6 +278,10 @@ body {
     width: 50px;
     height: 50px;
   }
+
+  .nav-track{
+    gap: 15px;
+  }
 }
 
 /* --- Estilo para el Título Principal --- */
